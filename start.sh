@@ -1,3 +1,16 @@
 #!/bin/bash
-# 替换成你ai_study环境真实的python绝对路径
-/root/miniconda3/envs/ai_study/bin/python main.py
+
+# 自动识别系统，加载conda hook，规避conda init报错（线上标准写法）
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    # MacOS
+    eval "$(/Users/$USER/miniconda3/bin/conda shell.bash hook)"
+else
+    # Linux/WSL/线上真实服务器
+    eval "$(/home/$USER/miniconda3/bin/conda shell.bash hook)"
+fi
+
+# 激活虚拟环境
+conda activate ai_study
+
+# 启动业务程序
+python main.py
