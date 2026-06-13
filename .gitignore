@@ -1,0 +1,23 @@
+# Conda虚拟环境
+ai_study/
+miniconda3/
+envs/
+
+# Python缓存、编译文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# IDE配置
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# 运行输出、临时文件
+output/
+temp/
+*.pdf
+*.docx
