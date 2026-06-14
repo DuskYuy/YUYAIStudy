@@ -1,4 +1,6 @@
-print("=== 环境校验成功 ===")
 import sys
-print(f"当前Python解释器路径：{sys.executable}")
-print("ai_study虚拟环境加载正常！")
+
+print("=== Python环境校验通过 ===")
+print(f"当前解释器完整路径：{sys.executable}")
+print(f"Python版本：{sys.version.split()[0]}")
+print("虚拟环境加载正常，可开展业务开发")
